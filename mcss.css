@@ -1,0 +1,173 @@
+/* กำหนดลักษณะพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* กำหนดสีฟ้าเป็นพื้นหลัง */
+}
+
+/* กำหนดการตั้งค่าให้ header */
+header {
+    background-color: #3498db; /* สีพื้นหลังของ header */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* ทำให้เมนูอยู่กลาง */
+    align-items: center;
+}
+
+/* โลโก้ใน header */
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-right: auto; /* ทำให้โลโก้อยู่ทางซ้าย */
+}
+
+/* ตั้งค่าเมนู navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: aqua;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* ส่วน content */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* เพิ่มสไตล์สำหรับปุ่ม */
+button {
+    background-color: #3498db; /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีตัวอักษร */
+    border: none; /* ไม่มีขอบ */
+    padding: 10px 20px; /* ขนาดปุ่ม */
+    font-size: 1rem; /* ขนาดตัวอักษร */
+    cursor: pointer; /* เปลี่ยนเป็น pointer เมื่อชี้ไปที่ปุ่ม */
+    border-radius: 5px; /* มุมโค้ง */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เพิ่มการเปลี่ยนสีและขนาดเมื่อ hover */
+}
+
+/* การโต้ตอบเมื่อชี้เมาส์ไปที่ปุ่ม */
+button:hover {
+    background-color: #2980b9; /* สีพื้นหลังเมื่อ hover */
+    transform: scale(1.05); /* ขยายปุ่มเมื่อ hover */
+}
+
+/* ตั้งค่า footer */
+footer {
+    background-color: #333;
+    color: #fbff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center; /* จัดเมนูแนวตั้งเมื่อหน้าจอเล็ก */
+    }
+
+    header .logo {
+        margin-right: 0;
+        margin-bottom: 10px; /* ให้โลโก้และเมนูห่างกันเมื่อใช้มือถือ */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Media Query สำหรับหน้าจอขนาดเล็กที่สุด */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Media Query สำหรับหน้าจอขนาดกลาง */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header nav ul {
+        display: flex;
+        justify-content: center; /* ทำให้เมนูอยู่กลางในหน้าจอขนาดกลาง */
+    }
+
+    header nav ul li {
+        margin-right: 15px;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Media Query สำหรับหน้าจอขนาดใหญ่ */
+@media (min-width: 1025px) {
+    header nav ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header nav ul li {
+        margin-right: 30px;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
